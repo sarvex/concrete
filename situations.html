@@ -424,6 +424,53 @@ an EntityMention.
        <td>
        </td>
       </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        tokens
+       </td>
+       <td>
+        <code>
+         <a href="structure.html#Struct_TokenRefSequence">
+          structure.TokenRefSequence
+         </a>
+        </code>
+       </td>
+       <td>
+        The location of this MentionArgument in the Communication.
+If this MentionArgument can be identified in a document using an
+EntityMention or SituationMention, then UUID references to those
+types should be preferred and this field left as null.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5
+       </td>
+       <td>
+        confidence
+       </td>
+       <td>
+        <code>
+         double
+        </code>
+       </td>
+       <td>
+        Confidence of this argument belonging to its SituationMention
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
      </table>
      <br/>
      A "concrete" argument, that may be used by SituationMentions or EntityMentions

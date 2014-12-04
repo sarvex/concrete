@@ -62,6 +62,10 @@
        DependencyParse
       </a>
       <br/>
+      <a href="#Struct_DependencyParseStructure">
+       DependencyParseStructure
+      </a>
+      <br/>
       <a href="#Struct_LatticePath">
        LatticePath
       </a>
@@ -625,9 +629,149 @@ indicates that no child head was identified.
        <td>
        </td>
       </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        structureInformation
+       </td>
+       <td>
+        <code>
+         <a href="structure.html#Struct_DependencyParseStructure">
+          DependencyParseStructure
+         </a>
+        </code>
+       </td>
+       <td>
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
      </table>
      <br/>
      Represents a dependency parse with typed edges.
+     <br/>
+    </div>
+    <div class="definition">
+     <h3 id="Struct_DependencyParseStructure">
+      Struct: DependencyParseStructure
+     </h3>
+     <table class="table-bordered table-striped table-condensed">
+      <thead>
+       <th>
+        Key
+       </th>
+       <th>
+        Field
+       </th>
+       <th>
+        Type
+       </th>
+       <th>
+        Description
+       </th>
+       <th>
+        Requiredness
+       </th>
+       <th>
+        Default value
+       </th>
+      </thead>
+      <tr>
+       <td>
+        1
+       </td>
+       <td>
+        isAcyclic
+       </td>
+       <td>
+        <code>
+         bool
+        </code>
+       </td>
+       <td>
+        True iff there are no cycles in the dependency graph.
+       </td>
+       <td>
+        required
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        2
+       </td>
+       <td>
+        isConnected
+       </td>
+       <td>
+        <code>
+         bool
+        </code>
+       </td>
+       <td>
+        True iff the dependency graph forms a single connected component.
+       </td>
+       <td>
+        required
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        3
+       </td>
+       <td>
+        isSingleHeaded
+       </td>
+       <td>
+        <code>
+         bool
+        </code>
+       </td>
+       <td>
+        True iff every node in the dependency parse has at most
+one head/parent/governor.
+       </td>
+       <td>
+        required
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        isProjective
+       </td>
+       <td>
+        <code>
+         bool
+        </code>
+       </td>
+       <td>
+        True iff there are no crossing edges in the dependency parse.
+       </td>
+       <td>
+        required
+       </td>
+       <td>
+       </td>
+      </tr>
+     </table>
+     <br/>
+     Information about the structure of a dependency parse.
+This information is computable from the list of dependencies,
+but this allows the consumer to make (verified) assumptions
+about the dependencies being processed.
      <br/>
     </div>
     <div class="definition">
@@ -1266,6 +1410,8 @@ effort at such a representation.
        </td>
        <td>
         A pointer to the token being tagged.
+
+Token indices are 0-based. These indices are also 0-based.
        </td>
        <td>
         optional
@@ -1310,6 +1456,64 @@ then all part of speech tags should be normalized to upper case.
        </td>
        <td>
         Confidence of the annotation.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        tagList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          string
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of strings that represent a distribution of possible
+tags for this token.
+
+If populated, the 'tag' field should also be populated
+with the "best" value from this list.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5
+       </td>
+       <td>
+        confidenceList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          double
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of doubles that represent confidences associated with
+the tags in the 'tagList' field.
+
+If populated, the 'confidence' field should also be populated
+with the confidence associated with the "best" tag in 'tagList'.
        </td>
        <td>
         optional
