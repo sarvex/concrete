@@ -471,6 +471,35 @@ types should be preferred and this field left as null.
        <td>
        </td>
       </tr>
+      <tr>
+       <td>
+        6
+       </td>
+       <td>
+        propertyList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="situations.html#Struct_Property">
+           Property
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        For the BinarySRL task, there may be situations
+where more than one property is attached to a single
+participant. A list of these properties can be stored in this field.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
      </table>
      <br/>
      A "concrete" argument, that may be used by SituationMentions or EntityMentions
@@ -1224,6 +1253,33 @@ arguments.
        <td>
        </td>
       </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        linkingList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="linking.html#Struct_Linking">
+           linking.Linking
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        Entity linking annotations associated with this SituationMentionSet.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
      </table>
      <br/>
      A theory about the set of situation mentions that are present in a
@@ -1323,6 +1379,33 @@ message. See also: SituationMention
        </td>
        <td>
         required
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        linkingList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="linking.html#Struct_Linking">
+           linking.Linking
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        Entity linking annotations associated with this SituationSet.
+       </td>
+       <td>
+        optional
        </td>
        <td>
        </td>

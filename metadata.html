@@ -50,6 +50,10 @@
        AnnotationMetadata
       </a>
       <br/>
+      <a href="#Struct_CommunicationMetadata">
+       CommunicationMetadata
+      </a>
+      <br/>
       <a href="#Struct_Digest">
        Digest
       </a>
@@ -58,36 +62,11 @@
        TheoryDependencies
       </a>
       <br/>
-      <a href="#Typedef_UUID">
-       UUID
-      </a>
-      <br/>
      </td>
      <td>
      </td>
     </tr>
    </table>
-   <hr/>
-   <div id="Typedefs_div">
-    <h2 id="Typedefs">
-     Type declarations
-    </h2>
-    <div class="definition">
-     <h3 id="Typedef_UUID">
-      Typedef: UUID
-     </h3>
-     <p>
-      <strong>
-       Base type:
-      </strong>
-      <code>
-       <a href="uuid.html#Struct_UUID">
-        uuid.UUID
-       </a>
-      </code>
-     </p>
-    </div>
-   </div>
    <hr/>
    <div id="Structs_div">
     <h2 id="Structs">
@@ -243,6 +222,112 @@ the default value (1) should suffice.
      <br/>
      Metadata associated with an annotation or a set of annotations,
 that identifies where those annotations came from.
+     <br/>
+    </div>
+    <div class="definition">
+     <h3 id="Struct_CommunicationMetadata">
+      Struct: CommunicationMetadata
+     </h3>
+     <table class="table-bordered table-striped table-condensed">
+      <thead>
+       <th>
+        Key
+       </th>
+       <th>
+        Field
+       </th>
+       <th>
+        Type
+       </th>
+       <th>
+        Description
+       </th>
+       <th>
+        Requiredness
+       </th>
+       <th>
+        Default value
+       </th>
+      </thead>
+      <tr>
+       <td>
+        1
+       </td>
+       <td>
+        tweetInfo
+       </td>
+       <td>
+        <code>
+         <a href="twitter.html#Struct_TweetInfo">
+          twitter.TweetInfo
+         </a>
+        </code>
+       </td>
+       <td>
+        Extra information for communications where kind==TWEET:
+Information about this tweet that is provided by the Twitter
+API.  For information about the Twitter API, see:
+&lt;https://dev.twitter.com/docs/platform-objects&gt;
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        2
+       </td>
+       <td>
+        emailInfo
+       </td>
+       <td>
+        <code>
+         <a href="email.html#Struct_EmailCommunicationInfo">
+          email.EmailCommunicationInfo
+         </a>
+        </code>
+       </td>
+       <td>
+        Extra information for communications where kind==EMAIL
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        3
+       </td>
+       <td>
+        nitfInfo
+       </td>
+       <td>
+        <code>
+         <a href="nitf.html#Struct_NITFInfo">
+          nitf.NITFInfo
+         </a>
+        </code>
+       </td>
+       <td>
+        Extra information that may come from the NITF
+(News Industry Text Format) schema. See 'nitf.thrift'.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+     </table>
+     <br/>
+     Metadata specific to a particular Communication object.
+This might include corpus-specific metadata (from the Twitter API),
+attributes associated with the Communication (the author),
+or other information about the Communication.
      <br/>
     </div>    <div class="definition">
      <h3 id="Struct_Digest">
@@ -470,8 +555,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -496,8 +581,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -522,8 +607,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -548,8 +633,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -574,8 +659,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -600,8 +685,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -626,8 +711,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -652,8 +737,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -678,8 +763,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -704,8 +789,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -730,8 +815,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -756,8 +841,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -782,8 +867,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -808,8 +893,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;
@@ -834,8 +919,8 @@ information in whatever way is convenient.
         <code>
          list&lt;
          <code>
-          <a href="metadata.html#Typedef_UUID">
-           UUID
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
           </a>
          </code>
          &gt;

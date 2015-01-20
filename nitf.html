@@ -123,7 +123,7 @@ or after April 02, 2006, as the linked page will have richer content.
        </td>
        <td>
         This field is a summary of the article, possibly written by
-and indexing service.
+an indexing service.
        </td>
        <td>
         optional
@@ -221,67 +221,6 @@ This field is most often defined for Obituaries and Book Reviews.
         6
        </td>
        <td>
-        body
-       </td>
-       <td>
-        <code>
-         string
-        </code>
-       </td>
-       <td>
-        The body field is the text content of the article. Please note that this
-value includes the lead paragraph.
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        7
-       </td>
-       <td>
-        byline
-       </td>
-       <td>
-        <code>
-         string
-        </code>
-       </td>
-       <td>
-        This field specifies the byline of the article as it appeared in its
-print edition. Please note that not every article in this collection
-has a byline, as editorials and other types of articles are generally
-unsigned. A normalized version, of the form (LAST NAME, FIRST NAME),
-can be stored in the &lt;strong&gt;normalizedByline&lt;/strong&gt; field.
-        <br/>
-        Sample byline:
-        <ul>
-         <li>
-          By James Reston
-         </li>
-         <li>
-          By JAMES GLANZ; William J. Broad contributed reporting for this
-article.
-         </li>
-         <li>
-          By ADAM NAGOURNEY and JEFF ZELENY
-         </li>
-        </ul>
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        8
-       </td>
-       <td>
         columnName
        </td>
        <td>
@@ -315,7 +254,7 @@ of that column.
       </tr>
       <tr>
        <td>
-        9
+        7
        </td>
        <td>
         columnNumber
@@ -339,7 +278,7 @@ field fall in the range 1-6.
       </tr>
       <tr>
        <td>
-        10
+        8
        </td>
        <td>
         correctionDate
@@ -362,7 +301,7 @@ text will also be specified (and vice versa).
       </tr>
       <tr>
        <td>
-        11
+        9
        </td>
        <td>
         correctionText
@@ -385,7 +324,7 @@ correction date will also be specified (and vice versa).
       </tr>
       <tr>
        <td>
-        12
+        10
        </td>
        <td>
         credit
@@ -407,58 +346,7 @@ this document.
       </tr>
       <tr>
        <td>
-        13
-       </td>
-       <td>
-        dateline
-       </td>
-       <td>
-        <code>
-         string
-        </code>
-       </td>
-       <td>
-        The "dateline" field is the dateline of the article. Generally a dateline
-is the name of the geographic location from which the article was filed
-followed by a comma and the month and day of the filing.
-        <br/>
-        Sample datelines:
-        <ul>
-         <li>
-          WASHINGTON, April 30
-         </li>
-         <li>
-          RIYADH, Saudi Arabia, March 29
-         </li>
-         <li>
-          ONTARIO, N.Y., Jan. 26
-         </li>
-        </ul>
-        Please note:
-        <ol>
-         <li>
-          The dateline location is the location from which the article was
-filed. Often times this location is related to the content of the
-article, but this is not guaranteed.
-         </li>
-         <li>
-          The date specified for the dateline is often but not always the day
-previous to the publication date.
-         </li>
-         <li>
-          The date is usually but not always specified.
-         </li>
-        </ol>
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        14
+        11
        </td>
        <td>
         dayOfWeek
@@ -502,7 +390,7 @@ previous to the publication date.
       </tr>
       <tr>
        <td>
-        15
+        12
        </td>
        <td>
         descriptorList
@@ -542,7 +430,7 @@ the article.
       </tr>
       <tr>
        <td>
-        16
+        13
        </td>
        <td>
         featurePage
@@ -571,7 +459,7 @@ the article.
       </tr>
       <tr>
        <td>
-        17
+        14
        </td>
        <td>
         generalOnlineDescriptorList
@@ -611,7 +499,7 @@ with the article.
       </tr>
       <tr>
        <td>
-        18
+        15
        </td>
        <td>
         guid
@@ -633,29 +521,7 @@ every document in the corpus.
       </tr>
       <tr>
        <td>
-        19
-       </td>
-       <td>
-        headline
-       </td>
-       <td>
-        <code>
-         string
-        </code>
-       </td>
-       <td>
-        This field specifies the headline of the article as it appeared in a
-print edition.
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        20
+        16
        </td>
        <td>
         kicker
@@ -677,7 +543,7 @@ accompaniment to a news headline.
       </tr>
       <tr>
        <td>
-        21
+        17
        </td>
        <td>
         leadParagraphList
@@ -704,7 +570,7 @@ article.
       </tr>
       <tr>
        <td>
-        22
+        18
        </td>
        <td>
         locationList
@@ -744,7 +610,7 @@ mentioned in the article.
       </tr>
       <tr>
        <td>
-        23
+        19
        </td>
        <td>
         nameList
@@ -782,7 +648,7 @@ mentioned in the article.
       </tr>
       <tr>
        <td>
-        24
+        20
        </td>
        <td>
         newsDesk
@@ -805,7 +671,7 @@ section in which the article appears.
       </tr>
       <tr>
        <td>
-        25
+        21
        </td>
        <td>
         normalizedByline
@@ -827,7 +693,7 @@ name, first name).
       </tr>
       <tr>
        <td>
-        26
+        22
        </td>
        <td>
         onlineDescriptorList
@@ -866,7 +732,7 @@ vocabulary that correspond to topics mentioned in the article.
       </tr>
       <tr>
        <td>
-        27
+        23
        </td>
        <td>
         onlineHeadline
@@ -888,7 +754,7 @@ online. Often this differs from the headline used in print.
       </tr>
       <tr>
        <td>
-        28
+        24
        </td>
        <td>
         onlineLeadParagraph
@@ -909,7 +775,7 @@ online. Often this differs from the headline used in print.
       </tr>
       <tr>
        <td>
-        29
+        25
        </td>
        <td>
         onlineLocationList
@@ -948,7 +814,7 @@ locations mentioned in the article.
       </tr>
       <tr>
        <td>
-        30
+        26
        </td>
        <td>
         onlineOrganizationList
@@ -987,7 +853,7 @@ organizations mentioned in the article.
       </tr>
       <tr>
        <td>
-        31
+        27
        </td>
        <td>
         onlinePeople
@@ -1026,7 +892,7 @@ mentioned in the article.
       </tr>
       <tr>
        <td>
-        32
+        28
        </td>
        <td>
         onlineSectionList
@@ -1052,7 +918,7 @@ is placed. This may typically be populated from a semicolon (;) delineated list.
       </tr>
       <tr>
        <td>
-        33
+        29
        </td>
        <td>
         onlineTitleList
@@ -1090,7 +956,7 @@ is placed. This may typically be populated from a semicolon (;) delineated list.
       </tr>
       <tr>
        <td>
-        34
+        30
        </td>
        <td>
         organizationList
@@ -1130,7 +996,7 @@ article.
       </tr>
       <tr>
        <td>
-        35
+        31
        </td>
        <td>
         page
@@ -1155,7 +1021,7 @@ the &lt;strong&gt;section&lt;/strong&gt; field.
       </tr>
       <tr>
        <td>
-        36
+        32
        </td>
        <td>
         peopleList
@@ -1194,7 +1060,7 @@ vocabulary that correspond to individuals mentioned in the article.
       </tr>
       <tr>
        <td>
-        37
+        33
        </td>
        <td>
         publicationDate
@@ -1215,7 +1081,7 @@ vocabulary that correspond to individuals mentioned in the article.
       </tr>
       <tr>
        <td>
-        38
+        34
        </td>
        <td>
         publicationDayOfMonth
@@ -1237,7 +1103,7 @@ published, always in the range 1-31.
       </tr>
       <tr>
        <td>
-        39
+        35
        </td>
        <td>
         publicationMonth
@@ -1259,7 +1125,7 @@ range 1-12 where 1 is January 2 is February etc.
       </tr>
       <tr>
        <td>
-        40
+        36
        </td>
        <td>
         publicationYear
@@ -1281,7 +1147,7 @@ value is in the range 1987-2007 for this collection.
       </tr>
       <tr>
        <td>
-        41
+        37
        </td>
        <td>
         section
@@ -1304,7 +1170,7 @@ number that indicates the section.
       </tr>
       <tr>
        <td>
-        42
+        38
        </td>
        <td>
         seriesName
@@ -1326,7 +1192,7 @@ of that column.
       </tr>
       <tr>
        <td>
-        43
+        39
        </td>
        <td>
         slug
@@ -1357,28 +1223,7 @@ different articles on different days may have the same slug.
       </tr>
       <tr>
        <td>
-        44
-       </td>
-       <td>
-        sourceFilePath
-       </td>
-       <td>
-        <code>
-         string
-        </code>
-       </td>
-       <td>
-        The file from which this object was read.
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        45
+        40
        </td>
        <td>
         taxonomicClassifierList
@@ -1419,7 +1264,7 @@ States/Arizona
       </tr>
       <tr>
        <td>
-        46
+        41
        </td>
        <td>
         titleList
@@ -1458,7 +1303,7 @@ mentioned in the article.
       </tr>
       <tr>
        <td>
-        47
+        42
        </td>
        <td>
         typesOfMaterialList
@@ -1497,7 +1342,7 @@ editorial category of the article.
       </tr>
       <tr>
        <td>
-        48
+        43
        </td>
        <td>
         url
@@ -1520,7 +1365,7 @@ on or after April 02, 2006, as the linked page will have richer content.
       </tr>
       <tr>
        <td>
-        49
+        44
        </td>
        <td>
         wordCount

@@ -377,33 +377,6 @@ pointers to specific constituents.
         4
        </td>
        <td>
-        tokenSequence
-       </td>
-       <td>
-        <code>
-         <a href="structure.html#Struct_TokenRefSequence">
-          TokenRefSequence
-         </a>
-        </code>
-       </td>
-       <td>
-        The list of pointers to the tokens dominated by this
-constituent. Typically, this field will only be defined for
-leaf constituents (i.e., constituents with no children). For
-many parsers, len(tokens) will always be either 1 (for leaf
-constituents) or 0 (for non-leaf constituents).
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        5
-       </td>
-       <td>
         headChildIndex
        </td>
        <td>
@@ -431,6 +404,48 @@ indicates that no child head was identified.
         <code>
          -1
         </code>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5
+       </td>
+       <td>
+        start
+       </td>
+       <td>
+        <code>
+         i32
+        </code>
+       </td>
+       <td>
+        The token index that marks the beginning of this constituent.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        6
+       </td>
+       <td>
+        ending
+       </td>
+       <td>
+        <code>
+         i32
+        </code>
+       </td>
+       <td>
+        The token index that marks the end of this constituent.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
        </td>
       </tr>
      </table>

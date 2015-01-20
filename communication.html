@@ -50,6 +50,10 @@
        Communication
       </a>
       <br/>
+      <a href="#Struct_CommunicationSet">
+       CommunicationSet
+      </a>
+      <br/>
      </td>
      <td>
      </td>
@@ -509,67 +513,19 @@ is not available.
         21
        </td>
        <td>
-        tweetInfo
+        communicationMetadata
        </td>
        <td>
         <code>
-         <a href="twitter.html#Struct_TweetInfo">
-          twitter.TweetInfo
+         <a href="metadata.html#Struct_CommunicationMetadata">
+          metadata.CommunicationMetadata
          </a>
         </code>
        </td>
        <td>
-        Extra information for communications where kind==TWEET:
-Information about this tweet that is provided by the Twitter
-API.  For information about the Twitter API, see:
-&lt;https://dev.twitter.com/docs/platform-objects&gt;
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        22
-       </td>
-       <td>
-        emailInfo
-       </td>
-       <td>
-        <code>
-         <a href="email.html#Struct_EmailCommunicationInfo">
-          email.EmailCommunicationInfo
-         </a>
-        </code>
-       </td>
-       <td>
-        Extra information for communications where kind==EMAIL
-       </td>
-       <td>
-        optional
-       </td>
-       <td>
-       </td>
-      </tr>
-      <tr>
-       <td>
-        23
-       </td>
-       <td>
-        nitfInfo
-       </td>
-       <td>
-        <code>
-         <a href="nitf.html#Struct_NITFInfo">
-          nitf.NITFInfo
-         </a>
-        </code>
-       </td>
-       <td>
-        Extra information that may come from the NITF
-(News Industry Text Format) schema. See 'nitf.thrift'.
+        Metadata about this specific Communication, such as information
+about its author, information specific to this Communication
+or Communications like it (info from an API, for example), etc.
        </td>
        <td>
         optional
@@ -591,6 +547,207 @@ Each communication instance is grounded by its original
 audio communications).  If the communication is not available in
 its original form, then these fields should store the
 communication in the least-processed form available.
+     <br/>
+    </div>
+    <div class="definition">
+     <h3 id="Struct_CommunicationSet">
+      Struct: CommunicationSet
+     </h3>
+     <table class="table-bordered table-striped table-condensed">
+      <thead>
+       <th>
+        Key
+       </th>
+       <th>
+        Field
+       </th>
+       <th>
+        Type
+       </th>
+       <th>
+        Description
+       </th>
+       <th>
+        Requiredness
+       </th>
+       <th>
+        Default value
+       </th>
+      </thead>
+      <tr>
+       <td>
+        1
+       </td>
+       <td>
+        communicationIdList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="uuid.html#Struct_UUID">
+           uuid.UUID
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of Communication UUIDs that this CommunicationSet
+represents.
+
+This field may be absent if this CommunicationSet represents
+a large corpus. If absent, 'corpus' field should be present.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        2
+       </td>
+       <td>
+        corpus
+       </td>
+       <td>
+        <code>
+         string
+        </code>
+       </td>
+       <td>
+        The name of a corpus or other document body that this
+CommunicationSet represents.
+
+Should be present if 'communicationIdList' is absent.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        3
+       </td>
+       <td>
+        entityMentionClusterList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="cluster.html#Struct_Clustering">
+           cluster.Clustering
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of Clustering objects that represent a
+group of EntityMentions that are a part of this
+CommunicationSet.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        4
+       </td>
+       <td>
+        entityClusterList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="cluster.html#Struct_Clustering">
+           cluster.Clustering
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of Clustering objects that represent a
+group of Entities that are a part of this
+CommunicationSet.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        5
+       </td>
+       <td>
+        situationMentionClusterList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="cluster.html#Struct_Clustering">
+           cluster.Clustering
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of Clustering objects that represent a
+group of SituationMentions that are a part of this
+CommunicationSet.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        6
+       </td>
+       <td>
+        situationClusterList
+       </td>
+       <td>
+        <code>
+         list&lt;
+         <code>
+          <a href="cluster.html#Struct_Clustering">
+           cluster.Clustering
+          </a>
+         </code>
+         &gt;
+        </code>
+       </td>
+       <td>
+        A list of Clustering objects that represent a
+group of Situations that are a part of this
+CommunicationSet.
+       </td>
+       <td>
+        optional
+       </td>
+       <td>
+       </td>
+      </tr>
+     </table>
+     <br/>
+     A structure that represents a collection of Communications.
      <br/>
     </div>
    </div>
